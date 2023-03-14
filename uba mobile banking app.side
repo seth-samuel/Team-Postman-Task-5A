@@ -1,0 +1,32 @@
+{
+  "id": "41091c6f-a11f-4a52-98a2-1f9a53f8a252",
+  "version": "2.0",
+  "name": "uba mobile banking app",
+  "url": "https://www.ubagroup.com",
+  "tests": [{
+    "id": "addf0423-e658-4576-8e1f-d7eb2d2a9458",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "9a1d000c-b689-45f2-9cef-76a6793ec510",
+    "name": "invalid email address/password",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "ea292160-fb26-4300-a0a1-4fb9ab3e1780",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["addf0423-e658-4576-8e1f-d7eb2d2a9458"]
+  }, {
+    "id": "285da6bb-3d00-4a1b-95dd-078db7db5ad1",
+    "name": "uba mobile banking app test",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": [],
+  "plugins": []
+}
