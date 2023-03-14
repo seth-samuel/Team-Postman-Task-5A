@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "7edbb93b-0edf-4634-9731-d94c0883cdba",
+		"name": "APICollectionA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get request",
+			"item": [
+				{
+					"name": "API Test Task6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/swagger.json",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"swagger.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Test Body responseTask7 Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									" var jsonData = pm.response.json();\r",
+									"//console.log(jsonData)\r",
+									"//console.log(jsonData.swagger)\r",
+									"//console.log(jsonData.info)\r",
+									"//console.log(jsonData.host)\r",
+									"//console.log(jsonData.basePath)\r",
+									"//console.log(jsonData.tags)\r",
+									"//console.log(jsonData.schemes)\r",
+									"//console.log(jsonData.paths)\r",
+									"\r",
+									"\r",
+									"pm.test(\"confirm schemes is json\", function () {\r",
+									"pm.expect(jsonData.swagger).to.eql(\"2.0\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"confirm host  is petstore.swagger.io\", function () {\r",
+									"pm.expect(jsonData.swagger).to.eql(\"2.0\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"confirm swagger is 2.0\", function () {\r",
+									"pm.expect(jsonData.swagger).to.eql(\"2.0\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"confirm that basepath is /v2\", function () {\r",
+									"pm.expect(jsonData.swagger).to.eql(\"2.0\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/swagger.json",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"swagger.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "set up environment Task 8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									" var jsonData = pm.response.json();\r",
+									"console.log(jsonData)\r",
+									"console.log(jsonData.swagger)\r",
+									"console.log(jsonData.info)\r",
+									"console.log(jsonData.host)\r",
+									"console.log(jsonData.basePath)\r",
+									"console.log(jsonData.tags)\r",
+									"console.log(jsonData.schemes)\r",
+									"console.log(jsonData.paths)\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"console.log(jsonData.swagger)\r",
+									"pm.environment.set(\"swagger value\", \"jsonData.swagger[2.0]\");\r",
+									"\r",
+									"pm.environment.set(\"info value\", \"jsonData.info\");\r",
+									"pm.environment.set(\"host value\", \"jsonData.host\");\r",
+									"pm.environment.set(\"basePath value\", \"jsonData.basePath\");\r",
+									"pm.environment.set(\"schemess value\", \"jsonData.schemes\");\r",
+									"pm.environment.set(\"paths value\", \"jsonData.paths\");\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test(\"confirm schemes is json\", function () {\r",
+									"pm.expect(jsonData.swagger).to.eql(\"2.0\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"confirm host  is petstore.swagger.io\", function () {\r",
+									"pm.expect(jsonData.swagger).to.eql(\"2.0\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"confirm swagger is 2.0\", function () {\r",
+									"pm.expect(jsonData.swagger).to.eql(\"2.0\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"confirm that basepath is /v2\", function () {\r",
+									"pm.expect(jsonData.swagger).to.eql(\"2.0\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v2/swagger.json",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"swagger.json"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
